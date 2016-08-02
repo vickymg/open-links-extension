@@ -8,6 +8,8 @@ chrome.browserAction.onClicked.addListener(function(tab) {
   });
 });
 
+// Listener that opens a new tab with the given url when 'open new tab'
+// message is received
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if(request.message === "open_new_tab") {
